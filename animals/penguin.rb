@@ -1,6 +1,8 @@
+require_relative 'egg'
+
 class Penguin
   attr_reader :cover, :movement, :favorite_food
-  
+
   def initialize(args = {})
     @cover = args[:cover] || 'feathers'
     @movement = args[:movement] || 'wings'
@@ -12,7 +14,7 @@ class Penguin
   end
 
   def reproduce
-    Penguin.new
+    Egg.new(animal: Penguin)
   end
 
   def swim

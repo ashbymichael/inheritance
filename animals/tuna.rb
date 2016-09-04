@@ -1,6 +1,8 @@
+require_relative 'egg'
+
 class Tuna
   attr_reader :cover, :movement, :favorite_food
-  
+
   def initialize(args = {})
     @cover = args[:cover] || 'scales'
     @movement = args[:movement] || 'fins'
@@ -12,7 +14,7 @@ class Tuna
   end
 
   def reproduce
-    Tuna.new
+    Egg.new(animal: Tuna)
   end
 
   def swim

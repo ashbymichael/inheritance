@@ -1,6 +1,8 @@
+require_relative 'egg'
+
 class Pigeon
   attr_reader :cover, :movement, :favorite_food, :flight_distance
-  
+
   def initialize(args = {})
     @cover = args[:cover] || 'feathers'
     @movement = args[:movement] || 'wings'
@@ -13,7 +15,7 @@ class Pigeon
   end
 
   def reproduce
-    Pigeon.new
+    Egg.new(animal: Pigeon)
   end
 
   def fly
