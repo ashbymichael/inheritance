@@ -1,6 +1,8 @@
 require_relative 'animal'
+require_relative 'swim'
 
 class Dolphin < Animal
+  include Swim
   attr_reader :cover, :movement, :favorite_food
 
   def initialize(args = {})
@@ -11,9 +13,5 @@ class Dolphin < Animal
 
   def reproduce
     Dolphin.new
-  end
-
-  def swim
-    puts "I know how to swim!"
   end
 end
