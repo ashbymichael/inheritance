@@ -1,4 +1,5 @@
 require_relative 'animal'
+require_relative 'egg'
 
 class Pigeon < Animal
   attr_reader :cover, :movement, :favorite_food, :flight_distance
@@ -11,7 +12,7 @@ class Pigeon < Animal
   end
 
   def reproduce
-    Pigeon.new
+    Egg.new(animal: Pigeon)
   end
 
   def fly
