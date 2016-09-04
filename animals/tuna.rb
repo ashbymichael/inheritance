@@ -1,4 +1,5 @@
 require_relative 'animal'
+require_relative 'egg'
 
 class Tuna < Animal
   attr_reader :cover, :movement, :favorite_food
@@ -10,7 +11,7 @@ class Tuna < Animal
   end
 
   def reproduce
-    Tuna.new
+    Egg.new(animal: Tuna)
   end
 
   def swim
