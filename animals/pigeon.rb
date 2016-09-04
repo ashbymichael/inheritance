@@ -1,11 +1,9 @@
 require_relative 'animal'
 
 class Pigeon < Animal
-  attr_reader :cover, :movement, :favorite_food, :flight_distance
+  attr_reader :favorite_food, :flight_distance
 
   def initialize(args = {})
-    @cover = args[:cover] || 'feathers'
-    @movement = args[:movement] || 'wings'
     @favorite_food = args[:favorite_food] || 'trash'
     @flight_distance = args[:flight_distance] || '25km'
   end
