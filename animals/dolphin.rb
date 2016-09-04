@@ -1,4 +1,6 @@
 class Dolphin
+  attr_reader :cover, :movement, :favorite_food
+
   def initialize(args = {})
     @cover = args[:cover] || 'skin'
     @movement = args[:movement] || 'fin'

@@ -1,4 +1,6 @@
 class Pigeon
+  attr_reader :cover, :movement, :favorite_food, :flight_distance
+  
   def initialize(args = {})
     @cover = args[:cover] || 'feathers'
     @movement = args[:movement] || 'wings'

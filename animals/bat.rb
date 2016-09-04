@@ -1,4 +1,6 @@
 class Bat
+  attr_reader :cover, :movement, :favorite_food, :flight_distance
+
   def initialize(args = {})
     @cover = args[:cover] || 'fur'
     @movement = args[:movement] || 'wings'

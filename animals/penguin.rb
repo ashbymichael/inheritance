@@ -1,4 +1,6 @@
 class Penguin
+  attr_reader :cover, :movement, :favorite_food
+  
   def initialize(args = {})
     @cover = args[:cover] || 'feathers'
     @movement = args[:movement] || 'wings'
