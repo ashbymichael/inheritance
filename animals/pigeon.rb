@@ -1,6 +1,6 @@
-require_relative 'animal'
+require_relative 'bird'
 
-class Pigeon < Animal
+class Pigeon < Bird
   attr_reader :favorite_food, :flight_distance
 
   def initialize(args = {})

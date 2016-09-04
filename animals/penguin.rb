@@ -1,6 +1,6 @@
-require_relative 'animal'
+require_relative 'bird'
 
-class Penguin < Animal
+class Penguin < Bird
   attr_reader :favorite_food
 
   def initialize(args = {})
