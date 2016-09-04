@@ -10,8 +10,4 @@ class Pigeon < Bird
     @favorite_food = args[:favorite_food] || 'trash'
     super
   end
-
-  def reproduce
-    Egg.new(animal: Pigeon)
-  end
 end
