@@ -7,8 +7,4 @@ class Bird < Animal
     @cover = args[:cover] || 'feathers'
     @movement = args[:movement] || 'wings'
   end
-
-  def reproduce
-    Egg.new(animal: self.class)
-  end
 end

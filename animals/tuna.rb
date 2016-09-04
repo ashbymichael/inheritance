@@ -11,8 +11,4 @@ class Tuna < Animal
     @movement = args[:movement] || 'fins'
     @favorite_food = args[:favorite_food] || 'little fish'
   end
-
-  def reproduce
-    Egg.new(animal: Tuna)
-  end
 end
