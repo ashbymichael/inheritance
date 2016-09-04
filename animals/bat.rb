@@ -1,13 +1,13 @@
-class Bat
+require_relative 'animal'
+
+class Bat < Animal
+  attr_reader :cover, :movement, :favorite_food, :flight_distance
+
   def initialize(args = {})
     @cover = args[:cover] || 'fur'
     @movement = args[:movement] || 'wings'
     @favorite_food = args[:favorite_food] || 'bugs'
     @flight_distance = args[:flight_distance] || '10km'
-  end
-
-  def eat
-    puts "I ate some #{@favorite_food}!"
   end
 
   def reproduce

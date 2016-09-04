@@ -1,12 +1,12 @@
-class Tuna
+require_relative 'animal'
+
+class Tuna < Animal
+  attr_reader :cover, :movement, :favorite_food
+
   def initialize(args = {})
     @cover = args[:cover] || 'scales'
     @movement = args[:movement] || 'fins'
     @favorite_food = args[:favorite_food] || 'little fish'
-  end
-
-  def eat
-    puts "I ate some #{@favorite_food}!"
   end
 
   def reproduce
