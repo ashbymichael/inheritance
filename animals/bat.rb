@@ -1,19 +1,14 @@
-require_relative 'animal'
+require_relative 'mammal'
 require_relative 'flight'
 
-class Bat < Animal
+class Bat < Mammal
   include Flight
-  attr_reader :cover, :movement, :favorite_food
+  attr_reader :movement, :favorite_food
 
   def initialize(args = {})
-    @cover = args[:cover] || 'fur'
     @movement = args[:movement] || 'wings'
     @favorite_food = args[:favorite_food] || 'bugs'
     super
     @flight_distance = args[:flight_distance] || '10km'
-  end
-
-  def reproduce
-    Bat.new
   end
 end
