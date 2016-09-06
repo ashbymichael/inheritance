@@ -6,6 +6,7 @@ class Penguin < Bird
 
   def initialize(args = {})
     @favorite_food = args[:favorite_food] || 'fish'
+    super
   end
 
   def reproduce

@@ -7,6 +7,7 @@ class Pigeon < Bird
   def initialize(args = {})
     @favorite_food = args[:favorite_food] || 'trash'
     @flight_distance = args[:flight_distance] || '25km'
+    super
   end
 
   def reproduce
