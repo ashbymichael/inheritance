@@ -153,5 +153,42 @@ describe Pigeon do
     expect(STDOUT).to receive(:puts).with("I just flew #{pigeon.flight_distance}!")
     pigeon.fly
   end
+end
 
+describe Tuna do
+  let(:tuna) { Tuna.new }
+
+  it "has default values for all attributes" do
+    expect(tuna.cover).to eq('scales')
+    expect(tuna.movement).to eq('fins')
+    expect(tuna.favorite_food).to eq('little fish')
+  end
+
+  it "can assign new values to any attribute" do
+    tuna_hash = {cover: 'scales',
+    movement: 'tentacles',
+    favorite_food: 'houses'}
+    hash_tuna = Tuna.new(tuna_hash)
+
+    expect(hash_tuna.cover).to eq(tuna_hash[:cover])
+    expect(hash_tuna.movement).to eq(tuna_hash[:movement])
+    expect(hash_tuna.favorite_food).to eq(tuna_hash[:favorite_food])
+  end
+
+  it "can eat" do
+    expect(STDOUT).to receive(:puts).with("I ate some #{tuna.favorite_food}!")
+    tuna.eat
+  end
+
+  it "can lay an egg" do
+    baby_tuna = tuna.reproduce
+    expect(baby_tuna).to be_a(Egg)
+    baby_tuna = baby_tuna.hatch
+    expect(baby_tuna).to be_a(Tuna)
+  end
+
+  it "can swim" do
+    expect(STDOUT).to receive(:puts).with("I know how to swim!")
+    tuna.swim
+  end
 end
