@@ -6,7 +6,7 @@ class Dolphin < Mammal
   attr_reader :movement, :favorite_food
 
   def initialize(args = {})
-    @movement = args[:movement] || 'fin'
+    @movement = args[:movement] || 'fins'
     @favorite_food = args[:favorite_food] || 'squid'
     super
     @cover = args[:cover] || 'skin'
