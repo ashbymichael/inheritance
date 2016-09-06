@@ -7,7 +7,7 @@ class Dolphin < Animal
 
   def initialize(args = {})
     @cover = args[:cover] || 'skin'
-    @movement = args[:movement] || 'fin'
+    @movement = args[:movement] || 'fins'
     @favorite_food = args[:favorite_food] || 'squid'
   end
 
