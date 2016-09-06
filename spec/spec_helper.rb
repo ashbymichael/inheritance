@@ -1,0 +1,6 @@
+require_relative '../animals/bat'
+require_relative '../animals/dolphin'
+require_relative '../animals/egg'
+require_relative '../animals/penguin'
+require_relative '../animals/pigeon'
+require_relative '../animals/tuna'
